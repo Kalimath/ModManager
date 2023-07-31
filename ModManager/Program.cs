@@ -1,7 +1,11 @@
+using ModManager;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+var services = builder.Services;
+services.AddControllersWithViews();
+//RegisterModManager.RegisterServices((ServiceCollection)services);
 
 var app = builder.Build();
 

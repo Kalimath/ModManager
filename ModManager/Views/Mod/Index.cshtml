@@ -1,0 +1,24 @@
+﻿@model List<Mod>
+
+@{
+    ViewBag.Title = "Mods";
+    Layout = "_Layout";
+}
+
+<h2>Mods</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+    </tr>
+    @foreach (var mod in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(mod.Name, "Details", new { id = mod.Name })
+            </td>
+        </tr>
+    }
+</table>
